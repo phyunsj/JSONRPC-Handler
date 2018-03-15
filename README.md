@@ -226,6 +226,7 @@ Generated Code (**jsonrpc_handler.switch.include**) will be called from **EgiFor
 /* ...omitted for brevity... */
 ```
 
+**test/unittest_jsonrpc.py" is a test script for all examples.
 
 ## Consideration
 
