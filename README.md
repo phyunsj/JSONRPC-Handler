@@ -201,9 +201,10 @@ For a simplicity reason, I use Microsoft Excel to put all examples in a single f
 
 Read .xls and generate codes as much as possible. **generator.py**
 
-The following package is used :
-- jsoncpp
-- AppWeb 2 EgiHandler
+The following packages are used :
+- jsoncpp (MIT License)
+- AppWeb 2 EgiHandler (Commercial or GPL)
+- python 
 
 Generated Code (**jsonrpc_handler.switch.include**) will be called from **EgiForm::run**. 
 
