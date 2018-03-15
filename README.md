@@ -1,5 +1,5 @@
 
-# JSONRPC + JSONCPP
+# JSONRPC Handler with JSONCPP+Code Generator
 
 JSONRPC Specification : http://www.jsonrpc.org/specification 
 
@@ -13,6 +13,7 @@ JSONRPC Specification : http://www.jsonrpc.org/specification
 > **run::res** <-- data sent to Client
 
 #### 1. RPC with named parameters 
+
 ##### math_subtract_1.csv 
 
 
@@ -166,6 +167,7 @@ JSONRPC Specification : http://www.jsonrpc.org/specification
 #### 4. RPC Batch
 
 TBD.
+
 #### 5. RPC Error Detection
 
 ##### 5.1 Parsing Error (JSON Format Error) -32700
