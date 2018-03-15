@@ -190,7 +190,7 @@ TBD.
 
 ## Limitations
 
-Focus on different JSONRPC formats (as described in Example). Limit on the data type support (**int** and one-level struct).
+No type checking. Support **int** and simple struct. 
 
 ## Implementation
 
