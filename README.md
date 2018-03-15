@@ -10,6 +10,7 @@ JSONRPC Specification : http://www.jsonrpc.org/specification
 ## Example
 
 > **run::req**  --> data sent to Server
+
 > **run::res** <-- data sent to Client
 
 #### 1. RPC with named parameters 
@@ -162,8 +163,11 @@ JSONRPC Specification : http://www.jsonrpc.org/specification
 |build|int| | | |
 
 **session**  is an unique ID to be shared til the end of the whole chain of method calls. Allocated by the back-end. 
+
 **build** is the release number to be compared for the backward compatibiity issue.
+
 **method** will be an enum value from code-generator
+
 #### 4. RPC Batch
 
 TBD.
@@ -172,8 +176,9 @@ TBD.
 
 ##### 5.1 Parsing Error (JSON Format Error) -32700
 
-run::req[{ 'jsonrpc': '2.0', 'build' : '10101', 'method': '407', 'params': '[ a,b,c,d,''  , 'id': '7'}] size : 93
-run::res[{"error":{"code":-32700,"message":"Parse error"},"id":0,"jsonrpc":"2.0","session":""}] size : 86
+> run::req[{ 'jsonrpc': '2.0', 'build' : '10101', 'method': '407', 'params': '[ a,b,c,d,''  , 'id': '7'}] size : 93
+
+> run::res[{"error":{"code":-32700,"message":"Parse error"},"id":0,"jsonrpc":"2.0","session":""}] size : 86
 
 
 ##### 5.2 Unknown "method" -32601
