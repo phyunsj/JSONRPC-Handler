@@ -105,7 +105,7 @@ JSONRPC Specification : http://www.jsonrpc.org/specification
 >run::res[{"id":5,"jsonrpc":"2.0","result":{"first":[19,20,22],"second":[9,19,29,1908443698,32506,0,0,0]},"session":"wsxaljren"}] size : 119
 
 
-#### 3. RPC with multi-level parameters
+#### 3. RPC with dictionary (struct)
 
 ##### math_subtract_6.csv 
 
