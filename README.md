@@ -3,7 +3,7 @@
 
 JSONRPC Specification : http://www.jsonrpc.org/specification 
 
-- Start with JSONRPC V2.0 and made some adjustment for my use. 
+- Start with JSONRPC V2.0 and made some adjustment for my need. 
 - Focus on Web Application rather than typical Clinet/Server Applicaiton.
 - Auto-Generated Code as much as possible. More can be done. 
 
@@ -212,16 +212,16 @@ Generated Code (**jsonrpc_handler.switch.include**) will be called from **EgiFor
 ```
  /* ...omitted for brevity... */
  	case MATH_SUBTRACT_1 : { 
-		Math math_instance;
-		math_subtract_1_in_t math_subtract_1_input;
+		Math math_instance;   // Math Class
+		math_subtract_1_in_t math_subtract_1_input;    
 		math_subtract_1_out_t math_subtract_1_output;
-		Json::Value JRes;
+		Json::Value JRes;  // A temporary place for JSON response
 		int index = 0;
 		math_subtract_1_input.first = JsonReq["params"]["first"].asInt();
 		math_subtract_1_input.second = JsonReq["params"]["second"].asInt();
-		jsonError = math_instance.subtract_1(math_subtract_1_input , math_subtract_1_output);
+		jsonError = math_instance.subtract_1(math_subtract_1_input , math_subtract_1_output);  // method call
 		JRes["result"] = math_subtract_1_output.result;
-		JsonRes["result"] = JRes["result"];
+		JsonRes["result"] = JRes["result"];  // The final place
 	}
 /* ...omitted for brevity... */
 ```
