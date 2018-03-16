@@ -162,15 +162,15 @@ JSONRPC Specification : http://www.jsonrpc.org/specification
 |jsonrpc|string| | | 
 |build|int| | | |
 
-**session**  is an unique ID to be shared til the end of the whole chain of method calls. Allocated by the back-end. 
+`session`  is an unique ID allocated by the back-end. 
 
-**build** is the release number to be compared for the backward compatibiity issue.
+`build` is the release number.
 
-**method** will be an enum value from code-generator
+`method` is an `enum` value from code-generator. (`V2.0` uses a `string` instead)
 
 #### 4. RPC Batch
 
-TBD.
+**TBD**
 
 #### 5. RPC Error Detection
 
