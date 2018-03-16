@@ -159,7 +159,7 @@ JSONRPC Specification : http://www.jsonrpc.org/specification
 |-|-|-|-|
 |id|int|id|int|
 |session|int|session|string|
-|jsonrpc|string| | | 
+|jsonrpc|string|jsonrpc | string| 
 |build|int| | | |
 
 `session`  is an unique ID allocated by the back-end. 
