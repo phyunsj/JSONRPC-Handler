@@ -190,23 +190,23 @@ TBD.
 
 ## Limitations
 
-No type checking. Support **int** and simple struct. 
+No type checking. Support `int` and `simple struct` with 3 fields. 
 
 ## Implementation
 
 For a simplicity reason, I use Microsoft Excel to put all examples in a single file.
 
-- math.xlsx becomes Math class. Each tab becomes method definition.
-- user-defined-types.xlsx 
+- `math.xlsx` becomes Math class. Each tab becomes method definition.
+- `user-defined-types.xlsx` has a `simple struct` definition.
 
-Read .xls and generate codes as much as possible. **generator.py**
+Read .xls and generate codes as much as possible. - `generator.py`
 
 The following packages are used :
 - jsoncpp (MIT License)
 - AppWeb 2 EgiHandler (Commercial or GPL)
 - python 
 
-Generated Code (**jsonrpc_handler.switch.include**) will be called from **EgiForm::run**. 
+Generated Code `sonrpc_handler.switch.include` will be called from `EgiForm::run()`. 
 
 
 ```
@@ -231,11 +231,4 @@ Generated Code (**jsonrpc_handler.switch.include**) will be called from **EgiFor
 ## Consideration
 
 - Use *.h (type definitions, function protoypes definitiosn, etc) instead. 
-
-
-
-
-
-
-
 
