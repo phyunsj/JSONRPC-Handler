@@ -3,7 +3,7 @@
 
 JSONRPC Specification : http://www.jsonrpc.org/specification 
 
-- Start with JSONRPC V2.0 and made some adjustment for my need. 
+- Start with JSONRPC `V2.0` and made some adjustment for my need. 
 - Focus on Web Application rather than typical Clinet/Server Applicaiton.
 - Auto-Generated Code as much as possible. More can be done. 
 
@@ -226,7 +226,7 @@ Generated Code `sonrpc_handler.switch.include` will be called from `EgiForm::run
 /* ...omitted for brevity... */
 ```
 
-**test/unittest_jsonrpc.py** is a test script for all examples.
+`test/unittest_jsonrpc.py` is a test script for all examples.
 
 ## Consideration
 
