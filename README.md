@@ -219,7 +219,8 @@ Generated Code `sonrpc_handler.switch.include` will be called from `EgiForm::run
 		int index = 0;
 		math_subtract_1_input.first = JsonReq["params"]["first"].asInt();
 		math_subtract_1_input.second = JsonReq["params"]["second"].asInt();
-		jsonError = math_instance.subtract_1(math_subtract_1_input , math_subtract_1_output);  // method call
+		// method call
+		jsonError = math_instance.subtract_1(math_subtract_1_input , math_subtract_1_output);  
 		JRes["result"] = math_subtract_1_output.result;
 		JsonRes["result"] = JRes["result"];  // The final place
 	}
