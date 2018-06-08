@@ -7,10 +7,14 @@ JSONRPC Specification : http://www.jsonrpc.org/specification
 - Focus on Web Application rather than typical Clinet/Server Applicaiton.
 - Auto-Generated Code as much as possible. More can be done. 
 
-## Use Case
+## ThingsBoard IoT Platform - RPC Capabilities
 
-**ThingsBoard IoT Platform : RPC Capabilities** (https://thingsboard.io/docs/user-guide/rpc/)
+#### DISCLAIMER : 
+6/8/2018: I am not associated with [ThingsBoard.io](https://thingsboard.io/) I simply found ThingsBoard.io while I was reviewing various IoT platforms. Based on the examples I found, the format is quite similar to JSONRPC Spec. Therefore, I just post it here.  
 
+https://thingsboard.io/docs/user-guide/rpc/ 
+
+![alt text](https://github.com/phyunsj/jsonrpc-embedded-cgi-handler/blob/master/thingsboard-IoT-jsonrpc.png)
 
 set-gpio-request.json
 ```
@@ -31,7 +35,7 @@ curl -v -X POST -d @set-gpio-request.json http://localhost:8080/api/plugins/rpc/
 --header "X-Authorization: $JWT_TOKEN"
 ```
 
-## JSONRPC Formats 
+## JSONRPC Implementation in various formats. 
 
 > **run::req**  --> data sent to Server
 
