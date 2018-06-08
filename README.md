@@ -11,10 +11,9 @@ JSONRPC Specification : http://www.jsonrpc.org/specification
 
 #### DISCLAIMER  
 6/8/2018: I am not associated with [ThingsBoard.io](https://thingsboard.io/). I simply found ThingsBoard.io while I was reviewing IoT platforms. The examples I found are quite similar to JSONRPC format.   
+ 
 
-https://thingsboard.io/docs/user-guide/rpc/ 
-
-![alt text](https://github.com/phyunsj/jsonrpc-embedded-cgi-handler/blob/master/thingsboard-IoT-jsonrpc.png)
+[![alt text](https://github.com/phyunsj/jsonrpc-embedded-cgi-handler/blob/master/thingsboard-IoT-jsonrpc.png)](https://thingsboard.io/docs/user-guide/rpc/ )
 
 set-gpio-request.json
 ```
