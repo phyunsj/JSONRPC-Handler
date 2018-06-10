@@ -74,6 +74,23 @@ Generated Code `sonrpc_handler.switch.include` will be called from `EgiForm::run
 
 `test/unittest_jsonrpc.py` is a test script for all examples.
 
+#### RPC Error Detection
+
+-  Parsing Error (JSON Format Error) -32700
+
+> run::req[{ 'jsonrpc': '2.0', 'build' : '10101', 'method': '407', 'params': '[ a,b,c,d,''  , 'id': '7'}] size : 93
+
+> run::res[{"error":{"code":-32700,"message":"Parse error"},"id":0,"jsonrpc":"2.0","session":""}] size : 86
+
+
+-  Unknown "method" -32601
+
+> run::req[{"id": 7, "params": {"second": {"p2": 75, "p3": 20, "p1": 33}, "first": {"p2": 5, "p3": 110, "p1": 44}}, "jsonrpc": "2.0", "build": 10101, "method": 600}] size : 153
+
+>run::res[{"error":{"code":-32601,"message":"Method not found"},"id":7,"jsonrpc":"2.0","session":"wsxaljren"}] size : 100
+
+
+
 ## Supported JSONRPC formats 
 
 > **run::req**  --> data sent to Server
@@ -238,21 +255,6 @@ Generated Code `sonrpc_handler.switch.include` will be called from `EgiForm::run
 #### 4. RPC Batch
 
 **TBD**
-
-#### 5. RPC Error Detection
-
-##### 5.1 Parsing Error (JSON Format Error) -32700
-
-> run::req[{ 'jsonrpc': '2.0', 'build' : '10101', 'method': '407', 'params': '[ a,b,c,d,''  , 'id': '7'}] size : 93
-
-> run::res[{"error":{"code":-32700,"message":"Parse error"},"id":0,"jsonrpc":"2.0","session":""}] size : 86
-
-
-##### 5.2 Unknown "method" -32601
-
-> run::req[{"id": 7, "params": {"second": {"p2": 75, "p3": 20, "p1": 33}, "first": {"p2": 5, "p3": 110, "p1": 44}}, "jsonrpc": "2.0", "build": 10101, "method": 600}] size : 153
-
->run::res[{"error":{"code":-32601,"message":"Method not found"},"id":7,"jsonrpc":"2.0","session":"wsxaljren"}] size : 100
 
 
  
