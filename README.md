@@ -33,7 +33,7 @@ curl -v -X POST -d @set-gpio-request.json http://localhost:8080/api/plugins/rpc/
 --header "X-Authorization: $JWT_TOKEN"
 ```
 
-## JSONRPC Implementation in various formats. 
+## JSONRPC in various formats. 
 
 > **run::req**  --> data sent to Server
 
