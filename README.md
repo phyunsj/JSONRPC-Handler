@@ -33,7 +33,48 @@ curl -v -X POST -d @set-gpio-request.json http://localhost:8080/api/plugins/rpc/
 --header "X-Authorization: $JWT_TOKEN"
 ```
 
-## JSONRPC in various formats. 
+
+
+## Implementation
+
+For a simplicity reason, I use Microsoft Excel to put all examples in a single file.
+
+- `math.xlsx` becomes Math class. Each tab becomes method definition.
+- `user-defined-types.xlsx` has a `simple struct` definition.
+
+#### Limitations : No type checking. Support `int` and `simple struct` with 3 fields.
+
+Read .xls and generate codes as much as possible. - `generator.py`
+
+The following packages are used :
+- jsoncpp (MIT License)
+- AppWeb 2 EgiHandler (Commercial or GPL)
+- python 
+
+Generated Code `sonrpc_handler.switch.include` will be called from `EgiForm::run()`. 
+
+
+```
+ /* ...omitted for brevity... */
+ 	case MATH_SUBTRACT_1 : { 
+		Math math_instance;   // Math Class
+		math_subtract_1_in_t math_subtract_1_input;    
+		math_subtract_1_out_t math_subtract_1_output;
+		Json::Value JRes;  // A temporary place for JSON response
+		int index = 0;
+		math_subtract_1_input.first = JsonReq["params"]["first"].asInt();
+		math_subtract_1_input.second = JsonReq["params"]["second"].asInt();
+		// method call
+		jsonError = math_instance.subtract_1(math_subtract_1_input , math_subtract_1_output);  
+		JRes["result"] = math_subtract_1_output.result;
+		JsonRes["result"] = JRes["result"];  // The final place
+	}
+/* ...omitted for brevity... */
+```
+
+`test/unittest_jsonrpc.py` is a test script for all examples.
+
+## Supported JSONRPC formats 
 
 > **run::req**  --> data sent to Server
 
@@ -214,47 +255,7 @@ curl -v -X POST -d @set-gpio-request.json http://localhost:8080/api/plugins/rpc/
 >run::res[{"error":{"code":-32601,"message":"Method not found"},"id":7,"jsonrpc":"2.0","session":"wsxaljren"}] size : 100
 
 
-## Limitations
-
-No type checking. Support `int` and `simple struct` with 3 fields. 
-
-## Implementation
-
-For a simplicity reason, I use Microsoft Excel to put all examples in a single file.
-
-- `math.xlsx` becomes Math class. Each tab becomes method definition.
-- `user-defined-types.xlsx` has a `simple struct` definition.
-
-Read .xls and generate codes as much as possible. - `generator.py`
-
-The following packages are used :
-- jsoncpp (MIT License)
-- AppWeb 2 EgiHandler (Commercial or GPL)
-- python 
-
-Generated Code `sonrpc_handler.switch.include` will be called from `EgiForm::run()`. 
-
-
-```
- /* ...omitted for brevity... */
- 	case MATH_SUBTRACT_1 : { 
-		Math math_instance;   // Math Class
-		math_subtract_1_in_t math_subtract_1_input;    
-		math_subtract_1_out_t math_subtract_1_output;
-		Json::Value JRes;  // A temporary place for JSON response
-		int index = 0;
-		math_subtract_1_input.first = JsonReq["params"]["first"].asInt();
-		math_subtract_1_input.second = JsonReq["params"]["second"].asInt();
-		// method call
-		jsonError = math_instance.subtract_1(math_subtract_1_input , math_subtract_1_output);  
-		JRes["result"] = math_subtract_1_output.result;
-		JsonRes["result"] = JRes["result"];  // The final place
-	}
-/* ...omitted for brevity... */
-```
-
-`test/unittest_jsonrpc.py` is a test script for all examples.
-
+ 
 ## Consideration
 
 - Use *.h (type definitions, function protoypes definitiosn, etc) instead. 
