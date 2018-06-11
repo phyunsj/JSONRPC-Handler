@@ -13,7 +13,8 @@ JSONRPC Specification : http://www.jsonrpc.org/specification
 
 [![alt text](https://github.com/phyunsj/jsonrpc-embedded-cgi-handler/blob/master/thingsboard-IoT-jsonrpc.png)](https://thingsboard.io/docs/user-guide/rpc/ )
 
-** _ThingsBoard RPC_ example **
+
+#### ThingsBoard GPIO RPC example 
 
 set-gpio-request.json
 ```
