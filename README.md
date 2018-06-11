@@ -9,7 +9,8 @@ JSONRPC Specification : http://www.jsonrpc.org/specification
 
 ## ThingsBoard IoT Platform - RPC Capabilities
 
-#### DISCLAIMER : (6/8/2018) No association with [ThingsBoard.io](https://thingsboard.io/). 
+#### DISCLAIMER : 
+(6/11/2018) Found [ThingsBoard.io](https://thingsboard.io/) while I was reviewing IoT platforms. Personally no association with ThisngsBoard.io. 
 
 [![alt text](https://github.com/phyunsj/jsonrpc-embedded-cgi-handler/blob/master/thingsboard-IoT-jsonrpc.png)](https://thingsboard.io/docs/user-guide/rpc/ )
 
